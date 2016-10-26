@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="table-responsive">
+		<h1 class="text-center">Contributors of repository: {{}}</h1>	
+		<table class="table table-hover text-center">
+			<thead>
+				<tr>
+					<th><a ng-href="">#</a></th>
+					<th><a ng-href="">Image</a></th>
+					<th><a ng-href="">Username</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contributor in contributors">
+					<td>{{$index+1}}</td>
+					<td><img ng-src="{{contributor.avatar_url}}"></img></td>
+					<td><a ng-href="{{contributor.html_url}}">{{contributor.login}}</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

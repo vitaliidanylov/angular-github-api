@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="user-container">
+		<div class="row">
+				<h1 class="info text-center">User <strong>{{user.login}}</strong> Info</h1>
+				<div class="col-md-6 col-sm-6 col-xs-6 text-right">
+					<div class="photo"><img ng-src="{{user.avatar_url}}" alt="{{user.login}}"></div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+					<p>Name: {{user.name}}</p>
+					<p>Login: {{user.login}}<p>
+					<p>Followers: {{user.followers}}</p>
+					<p>Following: {{user.following}}</p>
+					<p>Location: {{user.location}}</p>
+					<p>Email: {{user.email || "none"}}</p>
+					<p>Public repositories: {{user.public_repos}}</p>
+					<p>Public gists: {{user.public_gists}}</p>
+				</div>
+			</div>
+		<div class="row text-center">
+			<h2>Contributed Repositories</h2>
+			<div class="col-md-8 col-md-offset-2">
+				<ul class="list-group" ng-repeat="rep in repos">
+					<a href="#/{{rep.owner}}/{{rep.reponame}}"><li class="list-group-item">{{rep.reponame}}</li></a>				  
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+											

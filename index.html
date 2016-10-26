@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Scalac AngularRank App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="app.js"></script>
+	<script src="my-app.config.js"></script>
+	<script src="modules/list/main-list-controller.js"></script>
+	<script src="modules/user/user-controller.js"></script>
+	<script src="modules/repo/repo-controller.js"></script>	
+	<script src="modules/services/git-service.js"></script>
+	<script src="modules/services/info-service.js"></script>
+	<div ui-view=""></div>
+</body>
+</html>

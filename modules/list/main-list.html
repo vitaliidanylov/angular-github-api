@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="table-responsive">		
+		<table class="table table-hover text-center">
+			<thead>
+				<tr>
+					<th><a ng-href="">#</a></th>
+					<th><a ng-href="">Avatar</a></th>
+					<th><a ng-href="" ng-click="sortType = 'login';sortReverse = !sortReverse">Username</a></th>
+					<th><a ng-href="" ng-click="sortType = 'contributions'; sortReverse = !sortReverse">Contributions</a></th>
+					<th><a ng-href="" ng-click="sortType = 'followers'; sortReverse = !sortReverse">Followers</a></th>
+					<th><a ng-href="" ng-click="sortType = 'public_gists'; sortReverse = !sortReverse">Gists</a></th>
+					<th><a ng-href="" ng-click="sortType = 'public_repos'; sortReverse = !sortReverse">Repos</a></th>
+					<th><a ng-href="">Info</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in users | orderBy:sortType:sortReverse" >
+					<td>{{$index+1}}</td>
+					<td><img ng-src={{obj.avatar_url}} alt='user'></td>
+					<td><a ng-href={{obj.html_url}} target="blank">{{obj.login}}</a></td>
+					<td>{{obj.contributions}}</td>
+					<td>{{obj.followers}}</td>
+					<td>{{obj.public_gists}}</td>
+					<td>{{obj.public_repos}}</td>
+					<td><a ng-href="#/{{obj.login}}" class="btn btn-xs btn-primary" role="button">More</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
